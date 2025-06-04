@@ -1,12 +1,17 @@
-import {Box} from '@app/themes';
+import {Box, Text} from '@app/themes';
+import {Container} from '@components/container';
 import {useEffect} from 'react';
 
 export const RoleList = () => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    console.log('RoleList component mounted');
+  }, []);
 
   return (
-    <Box>
-      <Box>Role List</Box>
-    </Box>
+    <Container>
+      <Box flex={1} backgroundColor={'accent_1'}>
+        <Text>dasds</Text>
+      </Box>
+    </Container>
   );
 };
