@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+.yarn/patches
+.yarn/plugins
+.yarn/releases
+.yarn/versions
+.yarnrc.yml
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# OS generated files
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Expo build
+.expo-shared/
+
+# Temporary files
+tmp/
+temp/
+
+# config
+env.ts
+envKey.json
+
+# yarn
+/.yarn/cache
+/.yarn/install-state.gz
