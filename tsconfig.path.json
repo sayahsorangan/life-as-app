@@ -1,0 +1,21 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@router/*": ["./app/router/*"],
+      "@models/*": ["./app/model/*"],
+      "@config": ["./config/env"],
+      "@react-query/*": ["./app/lib/react-query/*"],
+      "@redux-store/*": ["./app/lib/redux/*"],
+      "@lib/*": ["./app/lib/*"],
+      "@i18n": ["./app/i18n"],
+      "@components-atoms/*": ["./app/components/atoms/*"],
+      "@components-molecules/*": ["./app/components/molecules/*"],
+      "@components-organisms/*": ["./app/components/organisms/*"],
+      "@components/*": ["./app/components/*"],
+      "@screens/*": ["./app/screens/*"],
+      "@app/*": ["./app/*"]
+    }
+  }
+}
