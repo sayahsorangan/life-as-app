@@ -8,6 +8,7 @@
       "@config": ["./config/env"],
       "@react-query/*": ["./app/lib/react-query/*"],
       "@redux-store/*": ["./app/lib/redux/*"],
+      "@store/*": ["./app/store/*"],
       "@lib/*": ["./app/lib/*"],
       "@i18n": ["./app/i18n"],
       "@components-atoms/*": ["./app/components/atoms/*"],

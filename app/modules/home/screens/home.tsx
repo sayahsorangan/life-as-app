@@ -1,11 +1,13 @@
-import React, {useState, useRef} from 'react';
-import {FlatList, TouchableOpacity, StyleSheet, TextInput, Animated, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {FlatList, TouchableOpacity, StyleSheet, TextInput, ScrollView} from 'react-native';
 import {Box, Text, useTheme} from '@app/themes';
 import {Container} from '@components/container';
 import {Modal} from '@components/modal';
 import {Button} from '@components/button/button';
 import {Icons} from '@app/assets/icons';
 import {IconButton} from '@components/button/icon-button';
+import {useAppTheme} from '@app/hooks/useTheme';
+import {spacing} from '@shopify/restyle';
 
 interface Profession {
   id: string;
@@ -233,7 +235,8 @@ const getItemLightColor = (color: keyof typeof import('@app/themes').theme.color
 };
 
 export const Home = () => {
-  const {colors} = useTheme();
+  const {colors, borderRadii, spacing} = useTheme();
+  const {themePreference, setTheme} = useAppTheme();
   const [searchQuery, setSearchQuery] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [selectedProfessionData, setSelectedProfessionData] = useState<Profession | null>(null);
@@ -288,6 +291,11 @@ export const Home = () => {
       color: colors.black,
       paddingVertical: 8,
       fontFamily: 'System',
+      backgroundColor: colors.grey_light,
+      height: 48,
+      marginRight: spacing.md,
+      borderRadius: borderRadii.md,
+      paddingHorizontal: spacing.md,
     },
     clearButton: {
       padding: 8,
@@ -311,6 +319,27 @@ export const Home = () => {
       profession.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       profession.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
+
+  const getThemeIcon = () => {
+    switch (themePreference) {
+      case 'light':
+        return 'sun';
+      case 'dark':
+        return 'moon';
+      default:
+        return 'smartphone';
+    }
+  };
+
+  const handleThemeSwitch = () => {
+    const themeOrder: Array<'light' | 'dark' | 'system'> = ['light', 'dark', 'system'];
+    const currentIndex = themeOrder.indexOf(themePreference);
+    const nextIndex = (currentIndex + 1) % themeOrder.length;
+    const nextTheme = themeOrder[nextIndex];
+    if (nextTheme) {
+      setTheme(nextTheme);
+    }
+  };
 
   const renderProfessionItem = ({item}: {item: Profession}) => (
     <TouchableOpacity
@@ -369,15 +398,7 @@ export const Home = () => {
   return (
     <Container backgroundColor={colors.white}>
       <Box backgroundColor="white" paddingHorizontal="lg" paddingVertical="md" style={styles.stickySearchContainer}>
-        <Box
-          backgroundColor="grey_light"
-          borderRadius="md"
-          paddingHorizontal="md"
-          paddingVertical="xs"
-          style={styles.searchContainer}
-          flexDirection="row"
-          alignItems="center"
-        >
+        <Box flexDirection={'row'}>
           <Box flex={1}>
             <TextInput
               placeholder="Search professions..."
@@ -387,13 +408,18 @@ export const Home = () => {
               placeholderTextColor={colors.grey_dark}
             />
           </Box>
-          {searchQuery.length > 0 && (
-            <TouchableOpacity onPress={() => setSearchQuery('')} style={styles.clearButton}>
-              <Text variant="body_regular" style={{fontSize: 16, color: colors.black}}>
-                ✕
-              </Text>
-            </TouchableOpacity>
-          )}
+          <IconButton
+            ButtonStyle={{
+              backgroundColor: colors.grey_light,
+              width: 48,
+              height: 48,
+              borderRadius: borderRadii.md,
+              justifyContent: 'center',
+            }}
+            icon_name={getThemeIcon()}
+            icon_color={colors.black}
+            onPress={handleThemeSwitch}
+          />
         </Box>
       </Box>
 

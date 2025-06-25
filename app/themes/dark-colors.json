@@ -1,41 +1,41 @@
 {
-  "primary": "#6EA0F1",
-  "primary_dark": "#6EA0F1",
-  "primary_light": "#00225B",
+  "primary": "#3B5BE4",
+  "primary_dark": "#CAD0E9",
+  "primary_light": "#132694",
 
-  "secondary": "#054380",
-  "secondary_dark": "#59ADFF",
-  "secondary_light": "#054380",
+  "secondary": "#2BBA99",
+  "secondary_dark": "#B8D3CD",
+  "secondary_light": "#0C8369",
 
-  "tertiary": "#00225B",
-  "tertiary_dark": "#6EA0F1",
-  "tertiary_light": "#00225B",
+  "tertiary": "#CD914E",
+  "tertiary_dark": "#EEE2D4",
+  "tertiary_light": "#895314",
 
-  "grey": "#A1A1A1",
-  "grey_dark": "#D1D1D1",
-  "grey_light": "#999999",
+  "grey": "#6B6882",
+  "grey_dark": "#DAD8E9",
+  "grey_light": "#423F5B",
 
-  "accent_1": "#1D40C3",
+  "accent_1": "#4F6CD9",
   "accent_1_dark": "#C5D1FF",
   "accent_1_light": "#1D40C3",
 
-  "accent_2": "#757A02",
+  "accent_2": "#BAC117",
   "accent_2_dark": "#F5F6D1",
   "accent_2_light": "#757A02",
 
-  "success": "#139027",
+  "success": "#47C55B",
   "success_dark": "#DCF8E0",
   "success_light": "#139027",
 
-  "danger": "#D32731",
+  "danger": "#F9646D",
   "danger_dark": "#FFE3E5",
   "danger_light": "#D32731",
 
-  "warning": "#D5770A",
+  "warning": "#F9B464",
   "warning_dark": "#FFF6EB",
   "warning_light": "#D5770A",
 
-  "info": "#1484D5",
+  "info": "#64BAF9",
   "info_dark": "#ECF7FF",
   "info_light": "#1484D5",
 
