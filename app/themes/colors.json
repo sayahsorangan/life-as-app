@@ -40,5 +40,6 @@
   "info_light": "#ECF7FF",
 
   "black": "#000000",
-  "white": "#FFFFFF"
+  "white": "#FFFFFF",
+  "background": "#FAFAFA"
 }

@@ -39,6 +39,7 @@
   "info_dark": "#ECF7FF",
   "info_light": "#1484D5",
 
-  "black": "#ffffff",
-  "white": "#1f1f1f"
+  "black": "#FBFBFB",
+  "white": "#1A1A1D",
+  "background": "#000000"
 }

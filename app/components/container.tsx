@@ -17,7 +17,7 @@ export const useStatusBarHeight = () => {
     return insets.top;
   } else {
     // For Android, combine safe area insets with StatusBar.currentHeight
-    return Math.max(insets.top, StatusBar.currentHeight ?? 24);
+    return Math.max(insets.top, StatusBar.currentHeight ?? 20);
   }
 };
 

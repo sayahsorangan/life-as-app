@@ -1,22 +1,22 @@
 [
-    {
-        "name": "bold",
-        "fontWeight": "800",
-        "font": "Inter-Regular"
-    },
-    {
-        "name": "medium",
-        "fontWeight": "600",
-        "font": "Inter-Regular"
-    },
-    {
-        "name": "regular",
-        "fontWeight": "500",
-        "font": "Inter-Regular"
-    },
-    {
-        "name": "semibold",
-        "fontWeight": "700",
-        "font": "Inter-Regular"
-    }
+  {
+    "name": "bold",
+    "fontWeight": "700",
+    "font": "Inter-Regular"
+  },
+  {
+    "name": "semibold",
+    "fontWeight": "600",
+    "font": "Inter-Regular"
+  },
+  {
+    "name": "medium",
+    "fontWeight": "500",
+    "font": "Inter-Regular"
+  },
+  {
+    "name": "regular",
+    "fontWeight": "400",
+    "font": "Inter-Regular"
+  }
 ]

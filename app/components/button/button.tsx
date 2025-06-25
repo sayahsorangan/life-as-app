@@ -29,7 +29,7 @@ export const Button = React.memo((props: ButtonProps) => {
     children,
     loading,
   } = props;
-
+  console.log(textVariants.body_bold);
   return (
     <TouchableOpacity
       disabled={disabled || loading}
@@ -43,7 +43,6 @@ export const Button = React.memo((props: ButtonProps) => {
           borderColor: colors.primary_dark,
           justifyContent: 'center',
           alignItems: 'center',
-          flex: 1,
           maxHeight: 56,
         },
         ButtonStyle,
@@ -60,6 +59,7 @@ export const Button = React.memo((props: ButtonProps) => {
               {
                 ...textVariants.button_m_bold,
                 color: disabled ? colors.grey_light : secondary ? colors.primary : colors.white,
+                fontWeight: '800',
               },
               LabelStyle,
             ]}

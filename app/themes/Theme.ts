@@ -92,7 +92,7 @@ const generateFont = () => {
   font.map(i => {
     data = {
       ...data,
-      [i.name]: {color: 'black', fontFamily: i.font, includeFontPadding: false},
+      [i.name]: {color: 'black', fontFamily: undefined, includeFontPadding: false, fontWeight: i.fontWeight},
     };
   });
   return data as IFontSylesKey;

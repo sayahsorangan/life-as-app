@@ -11,12 +11,12 @@ import {StatusBar, useColorScheme} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import {queryClient} from '@react-query/query-client';
-import {RoleList} from './modules/roles/screens/role-list';
-import {dark_theme, theme} from './themes';
+import {StackNavigator} from '@router/stack-navigation';
+import {Box, dark_theme, theme} from './themes';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const themePreference = 'dark';
+  const themePreference = 'system';
 
   useEffect(() => {
     const isDark = themePreference === 'dark' || (themePreference === 'system' && colorScheme === 'dark');
@@ -31,7 +31,9 @@ export default function RootLayout() {
             themePreference === 'dark' || (themePreference === 'system' && colorScheme === 'dark') ? dark_theme : theme
           }
         >
-          <RoleList />
+          <Box flex={1} backgroundColor={'white'}>
+            <StackNavigator />
+          </Box>
         </ThemeProvider>
       </QueryClientProvider>
     </SafeAreaProvider>
